@@ -1,0 +1,12 @@
+services:
+  node:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./hp:/usr/src/app
+    working_dir: /usr/src/app
+    command: /bin/sh
